@@ -43,6 +43,7 @@ function processImage(apiKey, profileImageURL) {
     headers: headers,
     body: JSON.stringify(data)
   }
+  console.log( data )
   let request = new Request('https://vision.googleapis.com/v1/images:annotate?key='+apiKey, requestObject);
   fetch (request)
     .then(data => console.log( data ))
